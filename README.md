@@ -1,4 +1,4 @@
-# veneer - Privacy for GitHub
+# veneer - Slightly More Privacy for GitHub
 
 `veneer` obscures your commit history on GitHub by automatically logging a commit everyday.
 
