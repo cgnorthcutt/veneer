@@ -34,10 +34,10 @@ if not os.path.isfile(fn):
 else:
     # Append to file if it does exist
     with open(fn, 'a') as wf:
-    if t.month == 1 and t.day == 1:
-        print("\n{}".format(t.year), end = "", file = wf)
-    if t.day == 1:
-        print("\n{} ".format(months[t.month]), end = "", file = wf)
-    if t.weekday() != 6 or random.random() < sunday_write_frac: # Only write on Sundays some fraction of the time.
-        print("|" if t.day == 5 else "-", end = "", file = wf)
+        if t.month == 1 and t.day == 1:
+            print("\n{}".format(t.year), end = "", file = wf)
+        if t.day == 1:
+            print("\n{} ".format(months[t.month]), end = "", file = wf)
+        if t.weekday() != 6 or random.random() < sunday_write_frac: # Only write on Sundays some fraction of the time.
+            print("|" if t.day == 5 else "-", end = "", file = wf)
 
