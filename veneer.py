@@ -30,7 +30,7 @@ if not os.path.isfile(fn):
         print("{}".format(t.year), file = wf)
         print("{} ".format(months[t.month]), end = "", file = wf)
         for i in range(1, 1 + t.day):
-            print("|" if i % 5 == 0 else "_", end = "", file = wf)
+            print("|" if i % 5 == 0 else "-", end = "", file = wf)
 else:
     # Append to file if it does exist
     with open(fn, 'a') as wf:
