@@ -26,6 +26,11 @@ months = dict(zip(range(1, 1 + len(months)), months))
 
 t = datetime.datetime.today()
 
+# Only set this variable if you are running the crontab job multiple times per day
+# In this example, this script will do nothing 40% of the time.
+# This will make your activity appear more random if you run the crontab a few times a day.
+do_nothing_prob = 0.3
+
 
 # In[ ]:
 
@@ -37,7 +42,7 @@ if not os.path.isfile(fn):
         print("{} ".format(months[t.month]), end = "", file = wf)
         for i in range(1, 1 + t.day):
             print("|" if i % 5 == 0 else "-", end = "", file = wf)
-else:
+else if do_nothing_prob < random.random():
     # Append to file if it does exist
     with open(fn, 'a') as wf:
         if t.month == 1 and t.day == 1:
