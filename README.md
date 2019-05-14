@@ -1,6 +1,6 @@
 # veneer - Slightly More Privacy for GitHub
 
-`veneer` obscures your commit history on GitHub by automatically logging a commit everyday.
+`veneer` obscures your commit history on GitHub by automatically logging 1-3 commits everyday.
 
 You can alter the `sunday_write_frac = 0.75`  in `veneer.py` variable to choose how often to register activity on Sundays.
 
@@ -16,7 +16,7 @@ You can alter the `sunday_write_frac = 0.75`  in `veneer.py` variable to choose 
 
 3. Add this line to the bottom:
 
-`@daily /path/to/veneer/crontab_script.bash # Runs everday at midnight.` 
+`0 */6 * * * /path/to/veneer/crontab_script.bash # Runs every six hours` 
 
 ## FAQ
 
@@ -29,6 +29,8 @@ You can alter the `sunday_write_frac = 0.75`  in `veneer.py` variable to choose 
 `chmod 776 /path/to/veneer/crontab_script.bash`
 `chmod 776 veneer.py`
 
-3. You can run more than one job a day if you like, just increase the crontab frequency.
+3. You can run a single job a day if you like:
 
-`0 */6 * * * /path/to/veneer/crontab_script.bash # Runs every six hours`
+`@daily /path/to/veneer/crontab_script.bash # Runs everday at midnight.`
+
+Just be sure to set `prob_do_nothing = 0.`  in `veneer.py`.
