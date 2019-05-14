@@ -30,3 +30,5 @@ You can alter the `sunday_write_frac = 0.75`  in `veneer.py` variable to choose 
 `chmod 776 veneer.py`
 
 3. You can run more than one job a day if you like, just increase the crontab frequency.
+
+`0 */6 * * * /path/to/veneer/crontab_script.bash # Runs every six hours`
