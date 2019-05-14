@@ -27,3 +27,4 @@ You can test to see if things are working by just running:
 If you have issues because the file is not executable, run:
 
 `chmod 776 /path/to/veneer/crontab_script.bash`
+`chmod 776 veneer.py`
