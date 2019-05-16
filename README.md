@@ -4,6 +4,8 @@
 
 You can alter the `sunday_write_frac = 0.75`  in `veneer.py` variable to choose how often to register activity on Sundays.
 
+Currently in alpha (expect issues).
+
 ## Installation
 
 1. Clone this repository:
