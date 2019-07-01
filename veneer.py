@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+
 # coding: utf-8
 
 # In[ ]:
@@ -42,7 +42,7 @@ if not os.path.isfile(fn):
         print("{} ".format(months[t.month]), end = "", file = wf)
         for i in range(1, 1 + t.day):
             print("|" if i % 5 == 0 else "-", end = "", file = wf)
-else if do_nothing_prob < random.random():
+elif do_nothing_prob < random.random():
     # Append to file if it does exist
     with open(fn, 'a') as wf:
         if t.month == 1 and t.day == 1:
