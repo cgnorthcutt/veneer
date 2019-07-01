@@ -10,6 +10,12 @@
 # In[ ]:
 
 
+from __future__ import print_function
+
+
+# In[ ]:
+
+
 import datetime
 import random
 import os
